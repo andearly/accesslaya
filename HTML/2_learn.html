@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access LAYA | Learn, Act, Yoke and Advocate Against Gender-Based Violence</title>
+<style>
+:root {
+  --bg: #edd9ff;
+  --white: #fff7ff;
+  --light: #f2a8ff;
+  --gray: #dac3e8;
+  --mid: #e498ff;
+  --dark: #b66ee8;
+  --darker: #a564d3;
+  --text: #7a5290;
+  --muted: #d581ff;
+  --accent: #ffc9ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: var(--mid);
+  color: var(--white);
+}
+.top-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.92rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.tagline {
+  flex: 1;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer {
+  background: var(--darker);
+  color: #ffffff;
+  padding: 40px 20px 60px;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.footer-brand p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #bfbfbf;
+}
+.footer-column h5 {
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: #fffdfd;
+}
+.footer-column ul {
+  list-style: none;
+}
+.footer-column li + li {
+  margin-top: 8px;
+}
+.footer-column a {
+  color: #c9c9c9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer-bottom {
+  max-width: 1100px;
+  margin: 18px auto 0;
+  border-top: 1px solid #fbdbff;
+  padding-top: 18px;
+  font-size: 0.82rem;
+  color: #e5dee4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+.socials span {
+  border: 1px solid #750099;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #750099;
+}
+
+/* ---------- Learn Page Styles ---------- */
+main {
+  padding: 0 20px 80px;
+}
+.learn-page {
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+.hero-learn {
+  background: linear-gradient(
+    270deg,
+    var(--darker) 0%,
+    var(--dark) 18%,
+    var(--mid) 36%,
+    var(--muted) 58%,
+    var(--accent) 78%,
+    var(--light) 92%,
+    var(--white) 100%
+  );
+  color: var(--text);
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 25px 60px rgba(122, 82, 144, 0.25);
+}
+.hero-learn h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+}
+.hero-learn p {
+  margin-top: 12px;
+  color: #4f2f65;
+  max-width: 640px;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.hero-tags span {
+  background: rgba(255, 255, 255, 0.4);
+  color: var(--darker);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.section-heading {
+  margin-top: 50px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.section-heading .eyebrow {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.section-heading h2 {
+  font-size: 2rem;
+  margin-top: 6px;
+  color: var(--darker);
+}
+.section-heading p {
+  margin-top: 8px;
+  color: var(--text);
+  max-width: 720px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.form-card {
+  background: rgba(255, 247, 255, 0.9);
+  border: 1px solid rgba(166, 100, 211, 0.25);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 12px 30px rgba(122, 82, 144, 0.12);
+}
+.form-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+.form-card h3 {
+  color: var(--dark);
+  font-size: 1.3rem;
+}
+.form-card p {
+  font-size: 0.95rem;
+}
+.cause-list {
+  list-style: disc;
+  padding-left: 18px;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+.scenario {
+  margin-top: auto;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-left: 3px solid var(--darker);
+}
+
+.content-layout {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  margin-top: 50px;
+}
+@media (max-width: 960px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.causes-panel, .resources-panel {
+  background: rgba(255, 247, 255, 0.9);
+  border: 1px solid rgba(122, 82, 144, 0.15);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(122, 82, 144, 0.1);
+}
+.cause-block {
+  border-left: 4px solid var(--muted);
+  padding-left: 16px;
+  margin-bottom: 18px;
+}
+.cause-block h4 {
+  color: var(--darker);
+  font-size: 1rem;
+}
+.cause-block p {
+  font-size: 0.92rem;
+  margin-top: 4px;
+}
+.factor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.factor-tags span {
+  background: var(--bg);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.resources-panel h3 {
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+.quick-card {
+  background: var(--gray);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(122, 82, 144, 0.2);
+  margin-bottom: 12px;
+}
+.quick-card strong {
+  display: block;
+  color: var(--darker);
+  margin-bottom: 6px;
+}
+.quick-card p {
+  font-size: 0.9rem;
+}
+.quick-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: solid;
+}
+
+.scenario-board {
+  margin-top: 50px;
+  background: rgba(182, 110, 232, 0.12);
+  border: 1px dashed rgba(182, 110, 232, 0.5);
+  border-radius: 22px;
+  padding: 32px;
+}
+.scenario-board h3 {
+  color: var(--darker);
+  margin-bottom: 18px;
+}
+.scenario-list {
+  display: grid;
+  gap: 18px;
+}
+.scenario-item {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid rgba(182, 110, 232, 0.25);
+}
+.scenario-item h4 {
+  color: var(--dark);
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+.scenario-item p {
+  font-size: 0.95rem;
+}
+
+.callout {
+  margin-top: 50px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.callout-actions a {
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.callout-primary {
+  background: var(--white);
+  color: var(--dark);
+}
+.callout-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: var(--white);
+}
+</style>
+<style>
+  .learn-page section {
+    margin-bottom: 80px;
+  }
+  @media (max-width: 768px) {
+    .learn-page section {
+      margin-bottom: 60px;
+    }
+  }
+  .section-heading {
+    margin-bottom: 36px;
+  }
+  .card-grid {
+    gap: 28px;
+  }
+  .form-card {
+    padding: 30px;
+  }
+  .content-layout {
+    margin-top: 60px;
+  }
+  .causes-panel,
+  .resources-panel {
+    padding: 36px;
+  }
+  .scenario-board {
+    padding: 40px;
+    margin-top: 60px;
+  }
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .evidence-card {
+    background: rgba(255, 247, 255, 0.95);
+    border: 1px solid rgba(166, 100, 211, 0.22);
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: 0 18px 38px rgba(122, 82, 144, 0.12);
+  }
+  .evidence-card h3 {
+    color: var(--darker);
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+  }
+  .evidence-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text);
+    font-size: 0.92rem;
+    display: grid;
+    gap: 8px;
+  }
+  .cause-evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+  }
+  .cause-evidence-card {
+    background: rgba(255, 247, 255, 0.95);
+    border: 1px solid rgba(122, 82, 144, 0.2);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 16px 34px rgba(122, 82, 144, 0.1);
+  }
+  .cause-evidence-card h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 1.12rem;
+  }
+  .cause-evidence-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    display: grid;
+    gap: 8px;
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+  }
+  .video-card {
+    background: rgba(255, 247, 255, 0.92);
+    border-radius: 22px;
+    border: 1px solid rgba(122, 82, 144, 0.2);
+    padding: 18px 18px 24px;
+    box-shadow: 0 18px 38px rgba(122, 82, 144, 0.14);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+  }
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-card h4 {
+    color: var(--darker);
+    font-size: 1.05rem;
+  }
+  .video-card p {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .video-card a {
+    align-self: flex-start;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: var(--muted);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .video-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(122, 82, 144, 0.25);
+  }
+  .reference-section {
+    background: rgba(255, 247, 255, 0.95);
+    border-radius: 24px;
+    border: 1px solid rgba(122, 82, 144, 0.22);
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(122, 82, 144, 0.12);
+  }
+  .reference-section h3 {
+    color: var(--darker);
+    margin-bottom: 16px;
+  }
+  .reference-list {
+    counter-reset: ref-counter;
+    display: grid;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .reference-list li {
+    list-style: none;
+    position: relative;
+    padding-left: 28px;
+  }
+  .reference-list li::before {
+    counter-increment: ref-counter;
+    content: "[" counter(ref-counter) "]";
+    position: absolute;
+    left: 0;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  sup a {
+    color: inherit;
+    text-decoration: none;
+  }
+  sup a:hover,
+  sup a:focus {
+    text-decoration: underline;
+  }
+</style>
+<style>
+  .form-card {
+    cursor: pointer;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+  }
+  .form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(122, 82, 144, 0.18);
+  }
+  .form-card:focus-within {
+    outline: 3px solid rgba(182, 110, 232, 0.35);
+    outline-offset: 4px;
+  }
+  .form-card.card-pop {
+    animation: cardPop 360ms ease;
+    box-shadow: 0 20px 42px rgba(122, 82, 144, 0.2);
+  }
+  @keyframes cardPop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .video-embed {
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.85));
+  }
+  .video-embed iframe {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .video-embed--active iframe {
+    opacity: 1;
+  }
+  .video-preview {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--white);
+    text-align: center;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .video-preview:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: -3px;
+  }
+  .video-preview--fade {
+    opacity: 0;
+    transform: scale(1.04);
+    pointer-events: none;
+  }
+  .preview-backdrop {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(182, 110, 232, 0.85), rgba(242, 168, 255, 0.75));
+    backdrop-filter: blur(4px);
+  }
+  .preview-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 0 26px;
+    z-index: 1;
+  }
+  .preview-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  }
+  .preview-icon::before {
+    content: '';
+    display: block;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid rgba(255, 255, 255, 0.95);
+  }
+  .preview-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .preview-content {
+      padding: 0 16px;
+    }
+    .preview-text {
+      font-size: 0.88rem;
+    }
+  }
+</style>
+<style>
+  .card-clickable {
+    cursor: pointer;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+  }
+  .card-clickable:hover,
+  .card-clickable:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(122, 82, 144, 0.18);
+  }
+  .card-clickable:active {
+    transform: translateY(-2px);
+  }
+  .card-clickable:focus-visible {
+    outline: 3px solid rgba(182, 110, 232, 0.35);
+    outline-offset: 4px;
+  }
+  .card-pop {
+    animation: cardPop 360ms ease;
+    box-shadow: 0 20px 42px rgba(122, 82, 144, 0.2);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">A</div>
+      <div>
+        <strong>Access LAYA</strong>
+      </div>
+    </div>
+    <div class="tagline">Empowering communities against gender-based violence</div>
+    <nav>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="learn-page">
+  <section class="hero-learn">
+    <h1>Learn the Forms & Causes of Gender-Based Violence</h1>
+    <p>Understanding how gender-based violence (GBV) shows up in Filipino homes, workplaces, schools, and online spaces helps us recognize early warnings and intervene safely. Explore the common forms, the conditions that allow them, and real-life scenarios based on local contexts.</p>
+    <div class="hero-tags">
+      <span>Physical</span>
+      <span>Emotional</span>
+      <span>Sexual</span>
+      <span>Economic</span>
+      <span>Digital</span>
+      <span>Community Response</span>
+    </div>
+    <div style="margin-top:20px;font-size:0.85rem;color:#4f2f65;">
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <p class="eyebrow">Understanding Gender-Based Violence</p>
+      <h2>Forms of GBV You Need to Recognize</h2>
+      <p>GBV is rooted in gender inequality and manifests differently across relationships and institutions. Philippine Commission on Women and UN Women monitoring note that LGBTQIA+ people, men, women, and children all experience overlapping harms, while WHO data show one in three women worldwide face physical or sexual violence—mirrored in local statistics.</p>
+    </div>
+
+    <div class="card-grid">
+      <article class="form-card">
+        <div class="form-icon">⚡</div>
+        <h3>Physical Violence</h3>
+        <p>Use of force that can cause injury, pain, or physical suffering, including hitting, choking, and restricting mobility.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Normalization of “discipline” at home</li>
+          <li>Alcohol-fueled conflicts</li>
+          <li>Impunity for intimate partner abuse</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Jose keeps bruises hidden because his live-in partner threatens to report him to their barangay captain if he “answers back,” reversing blame and keeping him silent.
+        </div>
+      </article>
+
+      <article class="form-card">
+        <div class="form-icon">🧠</div>
+        <h3>Emotional Violence</h3>
+        <p>Manipulation, insults, threats, gaslighting, and isolation that harm someone’s mental health or sense of safety.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Rigid expectations of obedience</li>
+          <li>Shame culture around mental health</li>
+          <li>Lack of counseling services</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Luningning’s supervisor calls her “hysterical” during team huddles and tells officemates she is “just pa-drama,” ruining her credibility when she reports harassment.
+        </div>
+      </article>
+
+      <article class="form-card">
+        <div class="form-icon">⚠️</div>
+        <h3>Sexual Violence</h3>
+        <p>Any sexual act or attempt without freely given consent, from harassment and coercion to assault.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Victim-blaming attitudes</li>
+          <li>Weak consent education in schools</li>
+          <li>Power abuse by authority figures</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Ate Minda’s landlord withholds her deposit unless she “keeps him company,” leveraging her need for affordable housing.
+        </div>
+      </article>
+
+      <article class="form-card">
+        <div class="form-icon">💸</div>
+        <h3>Economic Violence</h3>
+        <p>Controlling, withholding, or destroying financial resources to make someone dependent.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Unequal access to work and assets</li>
+          <li>Patriarchal inheritance customs</li>
+          <li>Lack of women-friendly credit programs</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Ramon confiscates his partner Althea’s sari-sari store earnings, telling her she’s “lucky” he even lets her sell, while forbidding her from opening a bank account.
+        </div>
+      </article>
+
+      <article class="form-card">
+        <div class="form-icon">📱</div>
+        <h3>Digital Violence</h3>
+        <p>Online harassment, doxxing, non-consensual sharing of images, and surveillance via spyware or stolen passwords.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Weak cyber-safety habits</li>
+          <li>Lack of platform accountability</li>
+          <li>Misuse of tech for control</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Kai’s ex logs into her messaging apps using the old Wi-Fi password and threatens to leak private photos unless she returns to him.</div>
+      </article>
+
+      <article class="form-card">
+        <div class="form-icon">🏳️‍🌈</div>
+        <h3>SOGIESC-Based Violence</h3>
+        <p>Harms targeting someone’s sexual orientation, gender identity, expression, or sex characteristics, including outing, conversion abuse, or denial of affirming healthcare.</p>
+        <h4>Common Causes</h4>
+        <ul class="cause-list">
+          <li>Policies that ignore LGBTQIA+ protections</li>
+          <li>Religious or cultural stigma against non-binary identities</li>
+          <li>Lack of gender-inclusive shelters and services</li>
+        </ul>
+        <div class="scenario">
+          <strong>Scenario:</strong>
+          Mika, a transfeminine call center agent, is forced by HR to cut her hair “to avoid confusing clients,” and her HMO request for hormone therapy is denied as “cosmetic.”
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="evidence-section">
+    <div class="section-heading">
+      <p class="eyebrow">Data Highlights</p>
+      <h2>Evidence & Impact by Violence Form</h2>
+      <p>Verified statistical snapshots help us connect everyday experiences with national and global trends, showing why survivor-centered services must respond to multiple harms at once.</p>
+    </div>
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <h3>Physical Violence</h3>
+        <ul>
+          <li><strong>17%</strong> of ever-married Filipinas aged 15–49 have experienced physical, sexual, or emotional partner violence, with bruises and fractures still the most treated injuries in barangay health stations.<sup><a href="#ref1">[1]</a></sup></li>
+          <li>WHO data show 27% of ever-partnered women worldwide endure physical and/or sexual intimate partner violence, often beginning before age 25.<sup><a href="#ref2">[2]</a></sup></li>
+        </ul>
+      </article>
+      <article class="evidence-card">
+        <h3>Emotional / Psychological Violence</h3>
+        <ul>
+          <li>Psychological violence—threats, humiliation, coercive control—is reported by 19% of Filipinas in unions.<sup><a href="#ref1">[1]</a></sup></li>
+          <li>RA 9262 filings confirm psychological violence remains the top VAWC complaint nationwide, signalling urgent need for trauma-informed barangay desks.<sup><a href="#ref6">[6]</a></sup></li>
+        </ul>
+      </article>
+      <article class="evidence-card">
+        <h3>Sexual Violence</h3>
+        <ul>
+          <li>7% of women aged 15–49 have experienced sexual violence, and 3% reported assaults within the previous 12 months.<sup><a href="#ref1">[1]</a></sup></li>
+          <li>Most survivors identify intimate partners or authority figures as perpetrators, underscoring how power imbalances drive coercion.<sup><a href="#ref1">[1]</a></sup></li>
+        </ul>
+      </article>
+      <article class="evidence-card">
+        <h3>Economic Violence</h3>
+        <ul>
+          <li>Violence against women carries productivity losses valued at up to 3.7% of national GDP through foregone wages, medical costs, and absenteeism.<sup><a href="#ref3">[3]</a></sup></li>
+          <li>Filipinas shoulder 4.2 hours of unpaid care daily—roughly double men’s time—limiting the savings needed to exit abusive homes.<sup><a href="#ref8">[8]</a></sup></li>
+        </ul>
+      </article>
+      <article class="evidence-card">
+        <h3>Digital Violence</h3>
+        <ul>
+          <li>67% of Filipina respondents in the “Free to Be Online?” study experienced gendered cyber-harassment such as body-shaming, threats, or unsolicited images.<sup><a href="#ref4">[4]</a></sup></li>
+          <li>The DOJ cybercrime office logged over 1.2 million cyber tips on online sexual exploitation in 2020, an increase of more than 200% from the previous year.<sup><a href="#ref7">[7]</a></sup></li>
+        </ul>
+      </article>
+      <article class="evidence-card">
+        <h3>SOGIESC-Based Violence</h3>
+        <ul>
+          <li>CHR and UNDP documented forced outing, conversion attempts, and denial of services targeting LGBTQIA+ Filipinos in schools, workplaces, and healthcare settings.<sup><a href="#ref5">[5]</a></sup></li>
+          <li>Without a national SOGIE Equality law, survivors often rely on informal mediation that rarely stops repeat abuse.<sup><a href="#ref5">[5]</a></sup></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-layout">
+    <div class="causes-panel">
+      <div class="section-heading" style="margin-top:0;">
+        <p class="eyebrow">Why GBV Persists</p>
+        <h2>Root Causes & Risk Factors</h2>
+        <p>GBV is rarely just one person’s “bad behavior.” It is sustained by layered systems that reward control and silence survivors.</p>
+      </div>
+
+      <div class="cause-block">
+        <h4>Cultural Norms</h4>
+        <p>“Tiis lang” and “lalaki kasi” narratives excuse abuse and discourage reporting, especially when elders reinforce them.</p>
+        <div class="factor-tags">
+          <span>Machismo</span>
+          <span>Honor-shame</span>
+          <span>Pakikisama</span>
+        </div>
+      </div>
+
+      <div class="cause-block">
+        <h4>Institutional Gaps</h4>
+        <p>Under-resourced barangay VAW desks and slow case handling make survivors relive trauma or drop complaints altogether.</p>
+        <div class="factor-tags">
+          <span>Backlogs</span>
+          <span>No safe shelters</span>
+          <span>Limited psychosocial aid</span>
+        </div>
+      </div>
+
+      <div class="cause-block">
+        <h4>Economic Pressures</h4>
+        <p>Job precarity and unpaid care work force survivors to stay with aggressors who control food, rent, or school expenses.</p>
+        <div class="factor-tags">
+          <span>Informal jobs</span>
+          <span>Debt</span>
+          <span>Care burden</span>
+        </div>
+      </div>
+
+      <div class="cause-block">
+        <h4>Digital Ecosystem</h4>
+        <p>Easy screenshotting, AI image edits, and anonymous accounts spread abuse faster than current laws can regulate.</p>
+        <div class="factor-tags">
+          <span>Doxxing</span>
+          <span>Deepfakes</span>
+          <span>Account hijack</span>
+        </div>
+      </div>
+
+      <div class="cause-block">
+        <h4>Legal & Policy Gaps</h4>
+        <p>The SOGIE Equality Bill remains pending, leaving LGBTQIA+ survivors with limited legal remedies against hate crimes and workplace discrimination.</p>
+        <div class="factor-tags">
+          <span>No SOGIE law</span>
+          <span>Weak enforcement</span>
+          <span>Case attrition</span>
+        </div>
+      </div>
+
+      <div class="cause-block">
+        <h4>Intersectional Exclusion</h4>
+        <p>Indigenous, PWD, or refugee communities face layered bias, making GBV reporting riskier due to language barriers, mobility issues, or immigration status.</p>
+        <div class="factor-tags">
+          <span>Multiple stigma</span>
+          <span>Access barriers</span>
+          <span>Fear of reprisal</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="resources-panel">
+      <h3>Quick Learning Boosts</h3>
+      <div class="quick-card">
+        <strong>Consent Checklist</strong>
+        <p>Five affirming statements to teach teens what “yes” truly means during barkada hangouts.</p>
+        <a href="#">Download PDF</a>
+      </div>
+      <div class="quick-card">
+        <strong>Barangay Referral Flow</strong>
+        <p>Step-by-step guide for kagawads on documenting GBV disclosures without retraumatizing survivors.</p>
+        <a href="#">View Flowchart</a>
+      </div>
+      <div class="quick-card">
+        <strong>Digital Safety Drill</strong>
+        <p>15-minute activity to audit passwords, privacy settings, and shared devices at home.</p>
+        <a href="#">Start Activity</a>
+      </div>
+      <div class="quick-card">
+        <strong>Hotline Directory</strong>
+        <p>DSWD, PNP Women & Children Desk, and NGO helplines organized by region.</p>
+        <a href="#">See Numbers</a>
+      </div>
+      <div class="quick-card">
+        <strong>SOGIESC Allyship Tips</strong>
+        <p>One-page guide for barangay health workers on respectful pronoun use and intake questions for LGBTQIA+ survivors.</p>
+        <a href="#">Read Tip Sheet</a>
+      </div>
+      <div class="quick-card">
+        <strong>Intersectional Risk Audit</strong>
+        <p>Worksheet to map how disability, ethnicity, or migration status compounds GBV vulnerabilities in your community.</p>
+        <a href="#">Try the Audit</a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="cause-evidence-section">
+    <div class="section-heading">
+      <p class="eyebrow">Systems View</p>
+      <h2>Evidence on Root Causes & Risk Amplifiers</h2>
+      <p>Numbers and policy reviews clarify why GBV persists despite existing laws, pointing to the structural shifts communities must push for together.</p>
+    </div>
+    <div class="cause-evidence-grid">
+      <article class="cause-evidence-card">
+        <h3>Persistent Gender Norms & Silence</h3>
+        <ul>
+          <li>More than half of women who experienced partner violence never sought help, citing fear of stigma or belief that abuse is a private matter.<sup><a href="#ref1">[1]</a></sup></li>
+          <li>UN Women warns crises intensify violence when harmful norms go unchallenged, as seen during pandemic lockdowns.<sup><a href="#ref9">[9]</a></sup></li>
+        </ul>
+      </article>
+      <article class="cause-evidence-card">
+        <h3>Economic & Care Burdens</h3>
+        <ul>
+          <li>Productivity losses from violence can reach 3.7% of GDP, underscoring how economic abuse undermines national development.<sup><a href="#ref3">[3]</a></sup></li>
+          <li>Women’s unpaid care load—double that of men—limits access to income, credit, and mobility needed to leave violent relationships.<sup><a href="#ref8">[8]</a></sup></li>
+        </ul>
+      </article>
+      <article class="cause-evidence-card">
+        <h3>Institutional & Legal Gaps</h3>
+        <ul>
+          <li>Barangay VAW desks remain constrained by staffing and privacy limitations, affecting survivor trust and follow-through.<sup><a href="#ref6">[6]</a></sup></li>
+          <li>The absence of nationwide SOGIE-inclusive legislation leaves LGBTQIA+ survivors with limited legal remedies and protection orders.<sup><a href="#ref5">[5]</a></sup></li>
+        </ul>
+      </article>
+      <article class="cause-evidence-card">
+        <h3>Technology Outpacing Safeguards</h3>
+        <ul>
+          <li>Girls encounter persistent gendered harassment online, blurring boundaries between digital and in-person abuse.<sup><a href="#ref4">[4]</a></sup></li>
+          <li>Cyber tips on online sexual exploitation tripled during lockdowns, overwhelming investigators and survivor services.<sup><a href="#ref7">[7]</a></sup></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="scenario-board">
+    <h3>Situational Snapshots</h3>
+    <div class="scenario-list">
+      <div class="scenario-item">
+        <h4>Commuter Harassment</h4>
+        <p>Marites livestreams a jeepney ride when a stranger presses against her. Viewers spam “OA naman,” causing her to delete the video and lose evidence. Bystander ridicule can be as harmful as the initial assault.</p>
+      </div>
+      <div class="scenario-item">
+        <h4>Campus Hazing</h4>
+        <p>Jun, a scholar at a Manila university, is forced to perform “feminizing” tasks during fraternity initiations. The abuse targets gender expression and is justified as tradition, masking GBV as “rite of passage.”</p>
+      </div>
+      <div class="scenario-item">
+        <h4>Workplace Retaliation</h4>
+        <p>Chief nurse Malou reports a doctor for touching her interns. She is reassigned to graveyard shifts and loses leadership allowances, signaling to staff that speaking up carries financial punishment.</p>
+      </div>
+      <div class="scenario-item">
+        <h4>Barangay Shaming</h4>
+        <p>Tita Fe seeks a Barangay Protection Order after years of insults from her husband, but the kagawad tells her to “magtiis alang-alang sa mga bata,” urging reconciliation instead of safety planning.</p>
+      </div>
+      <div class="scenario-item">
+        <h4>Queer Tenant Blackmail</h4>
+        <p>Jorel and partner Amihan are told by their landlady that their lease will be revoked unless they “act straight” around neighbors. She threatens to post their photos online to “warn other families.”</p>
+      </div>
+      <div class="scenario-item">
+        <h4>Online Outing</h4>
+        <p>Cel, a non-binary student leader, finds their private Discord screenshots leaked on a campus meme page. Classmates spam “confused ka lang,” pushing Cel to skip classes and lose scholarship attendance credits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="section-heading">
+      <p class="eyebrow">Multimedia Learning</p>
+      <h2>Video Modules to Deepen Community Discussions</h2>
+      <p>Share these short explainers during barangay assemblies, youth forums, and workplace orientations to reinforce empathy, bystander action, and survivor-centered responses.</p>
+    </div>
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/oQbei5JGiT8" title="Tea Consent by Blue Seat Studios" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h4>Tea Consent (Blue Seat Studios & Thames Valley Police)</h4>
+        <p>This animated explainer reframes sexual consent through an everyday metaphor, making it accessible for teens and adults alike.<sup><a href="#ref10">[10]</a></sup></p>
+        <a href="https://www.youtube.com/watch?v=oQbei5JGiT8" target="_blank" rel="noopener">Watch on YouTube</a>
+      </article>
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/KTvSfeCRxe8" title="Violence against women—it's a men's issue | Jackson Katz | TEDxFiDiWomen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h4>Violence against women—it's a men's issue (Jackson Katz)</h4>
+        <p>Katz challenges men to treat GBV as a leadership issue, offering scripts for allyship in schools, sports, and workplaces.<sup><a href="#ref11">[11]</a></sup></p>
+        <a href="https://www.youtube.com/watch?v=KTvSfeCRxe8" target="_blank" rel="noopener">Watch on YouTube</a>
+      </article>
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/n_sEwe3CI2M" title="UN Women: The Autocomplete Truth" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h4>The Autocomplete Truth (UN Women)</h4>
+        <p>This short film visualizes the sexist assumptions people face online, opening dialogue on digital harassment and stereotype-driven abuse.<sup><a href="#ref12">[12]</a></sup></p>
+        <a href="https://www.youtube.com/watch?v=n_sEwe3CI2M" target="_blank" rel="noopener">Watch on YouTube</a>
+      </article>
+    </div>
+  </section>
+
+  <p style="margin-top:20px;font-size:0.85rem;color:#7a5290;">
+    Sources: Philippine Commission on Women; UN Women; World Health Organization; Commission on Human Rights of the Philippines; GALANG Philippines; ASEAN SOGIE Caucus.
+  </p>
+
+  <section class="callout">
+    <div>
+      <h3>Keep Learning, Keep Intervening</h3>
+      <p>Share these insights during barangay assemblies, school homerooms, and workplace orientations. The more people learn the patterns, the faster we can interrupt GBV.</p>
+    </div>
+    <div class="callout-actions">
+      <a href="#" class="callout-primary">Download Training Deck</a>
+      <a href="#" class="callout-secondary">Book a Community Session</a>
+    </div>
+  </section>
+
+  <section class="reference-section">
+    <h3>References</h3>
+    <ol class="reference-list">
+      <li id="ref1">Philippine Statistics Authority. (2023). <em>Philippine National Demographic and Health Survey 2022: Final Report.</em> Quezon City: PSA.</li>
+      <li id="ref2">World Health Organization. (2021). <em>Violence against women prevalence estimates, 2018.</em> Geneva: WHO.</li>
+      <li id="ref3">World Bank Group. (2019). <em>Gender-based violence (Violence Against Women and Girls) Brief.</em> Washington, DC: World Bank.</li>
+      <li id="ref4">Plan International & UNICEF. (2020). <em>Free to Be Online? Girls' and young women's experiences of online harassment – Philippines Spotlight.</em></li>
+      <li id="ref5">Commission on Human Rights of the Philippines & United Nations Development Programme. (2020). <em>Legal Gender Recognition in the Philippines: A Rights-Based Approach.</em></li>
+      <li id="ref6">Philippine Commission on Women. (2024). <em>VAWC Cases Reported under RA 9262: 2023 Situationer.</em></li>
+      <li id="ref7">Department of Justice – Office of Cybercrime & Inter-Agency Council Against Trafficking. (2021). <em>Online Sexual Abuse or Exploitation of Children (OSAEC) Situationer.</em> Manila: DOJ.</li>
+      <li id="ref8">Philippine Statistics Authority. (2022). <em>Gender and unpaid care work: Highlights of the 2019 Pilot National Time Use Survey.</em></li>
+      <li id="ref9">UN Women. (2020). <em>The Shadow Pandemic: Violence against women and girls and COVID-19.</em> New York: UN Women.</li>
+      <li id="ref10">Blue Seat Studios & Emmeline May. (2015). <em>Tea Consent</em> [Video]. YouTube. https://www.youtube.com/watch?v=oQbei5JGiT8</li>
+      <li id="ref11">Katz, J. (2013). <em>Violence against women—it's a men's issue | TEDxFiDiWomen</em> [Video]. YouTube. https://www.youtube.com/watch?v=KTvSfeCRxe8</li>
+      <li id="ref12">UN Women. (2013). <em>The Autocomplete Truth</em> [Video]. YouTube. https://www.youtube.com/watch?v=n_sEwe3CI2M</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Access LAYA</h4>
+      <p>Empowering communities against gender-based violence through education, advocacy, and survivor-centered support.</p>
+    </div>
+    <div class="footer-column">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="3_act.html">Hotlines</a></li>
+        <li><a href="4_yoke.html">Community</a></li>
+        <li><a href="5_advocate.html">Digital Materials</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@accesslaya.ph">accesslaya@email.com</a></li>
+        <li><a href="#">+63 917 555 2211</a></li>
+        <li><a href="#">Batangas City, Philippines</a></li>
+      </ul>
+      <div class="socials">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Access LAYA. All rights reserved.</span>
+    <span>Privacy Policy • Terms</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.form-card');
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.remove('card-pop');
+      void card.offsetWidth;
+      card.classList.add('card-pop');
+      setTimeout(() => {
+        card.classList.remove('card-pop');
+      }, 360);
+    });
+  });
+
+  const videoEmbeds = document.querySelectorAll('.video-card .video-embed');
+  videoEmbeds.forEach((embed) => {
+    const iframe = embed.querySelector('iframe');
+    if (!iframe) return;
+
+    const originalSrc = iframe.getAttribute('src');
+    iframe.dataset.src = originalSrc;
+    iframe.removeAttribute('src');
+
+    const videoCard = embed.closest('.video-card');
+    const titleEl = videoCard ? videoCard.querySelector('h4') : null;
+    const titleText = titleEl ? titleEl.textContent.trim() : 'Play video';
+
+    const preview = document.createElement('div');
+    preview.className = 'video-preview';
+    preview.setAttribute('role', 'button');
+    preview.setAttribute('tabindex', '0');
+    preview.setAttribute('aria-label', `Play "${titleText}"`);
+
+    preview.innerHTML = `
+      <div class="preview-backdrop"></div>
+      <div class="preview-content">
+        <div class="preview-icon" aria-hidden="true"></div>
+        <span class="preview-text">${titleText}</span>
+      </div>
+    `;
+
+    const activateVideo = () => {
+      if (iframe.getAttribute('src')) return;
+      iframe.setAttribute('src', iframe.dataset.src);
+      embed.classList.add('video-embed--active');
+      preview.classList.add('video-preview--fade');
+      setTimeout(() => preview.remove(), 260);
+    };
+
+    preview.addEventListener('click', activateVideo);
+    preview.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activateVideo();
+      }
+    });
+
+    embed.appendChild(preview);
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const motionSelectors = [
+    '.evidence-card',
+    '.cause-evidence-card',
+    '.quick-card',
+    '.scenario-item',
+    '.cause-block',
+    '.video-card'
+  ];
+  const motionElements = document.querySelectorAll(motionSelectors.join(', '));
+
+  motionElements.forEach((element) => {
+    element.classList.add('card-clickable');
+
+    if (!element.hasAttribute('tabindex')) {
+      element.setAttribute('tabindex', '0');
+    }
+    if (!element.hasAttribute('role')) {
+      element.setAttribute('role', 'button');
+    }
+
+    const triggerPop = () => {
+      element.classList.remove('card-pop');
+      void element.offsetWidth;
+      element.classList.add('card-pop');
+      setTimeout(() => element.classList.remove('card-pop'), 360);
+    };
+
+    element.addEventListener('click', triggerPop);
+    element.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        triggerPop();
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Take Action Now</title>
+<style>
+
+:root {
+  --bg: #edd9ff;
+  --white: #fff7ff;
+  --light: #f2a8ff;
+  --gray: #dac3e8;
+  --mid: #e498ff;
+  --dark: #b66ee8;
+  --darker: #a564d3;
+  --text: #7a5290;
+  --muted: #d581ff;
+  --accent: #ffc9ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--mid);
+  color: var(--white);
+}
+.top-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.92rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.tagline {
+  flex: 1;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background: linear-gradient(
+    270deg,
+    var(--darker) 0%,
+    var(--dark) 18%,
+    var(--mid) 36%,
+    var(--muted) 58%,
+    var(--accent) 78%,
+    var(--light) 92%,
+    var(--white) 100%
+  );
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text);
+}
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--white);
+}
+.hero p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* ---------- Emergency Cards ---------- */
+.emergency-title {
+    font-size: 20px;
+    color: #400b5a;
+    border-left: 5px solid #35054b;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card, .help-card {
+    background: rgba(255, 247, 255, 0.95);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card h3, .help-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+.card ul, .help-card ul {
+    padding-left: 20px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary, .help-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--white);
+    background: var(--muted);
+    transition: 0.25s;
+    text-decoration: none;
+
+}
+.btn-primary:hover, .help-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ---------- Prevention Strategies ---------- */
+.two-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.icon-text i {
+    font-size: 28px;
+    color: var(--dark);
+}
+
+/* ---------- Help Cards ---------- */
+.help-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px 20px 20px 20px;
+}
+.help-card-content {
+    padding: 15px;
+}
+.card, .help-card {
+    background: rgba(255, 247, 255, 0.95);
+    border-radius: 15px; 
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card, .help-card {
+    border-radius: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--darker);
+  color: #ffffff;
+  padding: 40px 20px 60px;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.footer-brand p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #bfbfbf;
+}
+.footer-column h5 {
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: #fffdfd;
+}
+.footer-column ul {
+  list-style: none;
+}
+.footer-column li + li {
+  margin-top: 8px;
+}
+.footer-column a {
+  color: #c9c9c9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer-bottom {
+  max-width: 1100px;
+  margin: 18px auto 0;
+  border-top: 1px solid #fbdbff;
+  padding-top: 18px;
+  font-size: 0.82rem;
+  color: #e5dee4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+.socials span {
+  border: 1px solid #750099;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #750099;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">A</div>
+      <div>
+        <strong>Access LAYA</strong>
+      </div>
+    </div>
+    <div class="tagline">Empowering communities against gender-based violence</div>
+    <nav>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>Take Action Now</h2>
+    <p>Immediate resources, prevention strategies, and ways to help those affected by gender-based violence</p>
+</div>
+
+<!-- EMERGENCY RESOURCES -->
+<div class="section">
+    <div class="emergency-title">Emergency Resources</div>
+    <div class="three-col">
+
+        <!-- Call Hotlines -->
+        <div class="card">
+            <h3>National Crisis Hotline</h3>
+            <p>Available 24/7 for immediate assistance and support.</p>
+            <ul>
+                <li>PNP Women &amp; Children Protection Center: <strong>(02) 8352-6690</strong></li>
+                <li>National Emergency Hotline: <strong>911</strong></li>
+            </ul>
+            <a class="btn-primary" href="tel:+0283526690">Call PNP Women &amp; Children Protection Center</a>
+            <a class="btn-primary" href="tel:911">Call National Emergency Hotline</a>
+        </div>
+
+        <!-- Text Crisis Lines -->
+        <div class="card">
+            <h3>Text Crisis Line</h3>
+            <p>Get crisis support via text from trained counselors.</p>
+            <ul>
+                <li>PNP Women &amp; Children Protection Center: <strong>0919-7777-377</strong></li>
+                <li>Department of Social Welfare: <strong>0918-912-2813</strong></li>
+            </ul>
+            <a class="btn-primary" href="sms:09197777377">Text PNP Women &amp; Children Protection Center</a>
+            <a class="btn-primary" href="sms:09189122813">Text Department of Social Welfare</a>
+        </div>
+
+        <!-- Counseling Services -->
+        <div class="card">
+            <h3>Counseling Services</h3>
+            <ul>
+                <li>Inter-Agency Council on Violence Against Women &amp; Children (IACVAWC)</li>
+                <li>Inter-Agency Council Against Trafficking</li>
+                <li>Barangay VAW Desk</li>
+            </ul>
+            <a class="btn-primary" href="https://www.bing.com/search?pglt=297&amp;q=get+couseling+services+in+gbv&amp;cvid=fb628fe200ee4ff6ab3d8c0a459ea170&amp;gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCTI4MTQzajBqMagCCLACAQ&amp;FORM=ANSPA1&amp;ucpdpc=UCPD&amp;PC=NMTS">Get Counseling Help</a>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- PREVENTION STRATEGIES -->
+<div class="section">
+    <h2 style="text-align:center; margin-bottom:20px;">Prevention Strategies</h2>
+    <div class="two-col">
+        <div class="card">
+            <div class="icon-text">
+                <i class="fa-solid fa-shield"></i>
+                <h3>Personal Safety Planning</h3>
+            </div>
+            <ul>
+                <li>Identify safe exits &amp; trusted contacts</li>
+                <li>Prepare emergency supplies &amp; documents</li>
+                <li>Use code words with family &amp; friends</li>
+            </ul>
+            <a class="btn-primary" href="https://www.antiviolenceproject.org/resources/safety-planning/">Create My Safety Plan</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-text">
+                <i class="fas fa-eye"></i>
+                <h3>Bystander Intervention</h3>
+            </div>
+            <ul>
+                <li>Use the 5 Ds: Direct, Distract, Delegate, Delay, Document</li>
+                <li>Recognize unsafe situations</li>
+            </ul>
+            <a href="https://righttobe.org/guides/bystander-intervention-training/" class="btn-primary">Learn More</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-text">
+                <i class="fas fa-heart"></i>
+                <h3>Healthy Relationship Education</h3>
+            </div>
+            <ul>
+             <li>Understand boundaries, communication, and consent.</li>
+            <a class="btn-primary" href="https://onecondoms.com/blogs/education/consent-and-boundaries-understanding-healthy-relationships?srsltid=AfmBOorMgIh2FzT0EQgt1HRIOmD1VorcvT4yoH5t4Qwvgm0Z5FPcVglh">Access Resources</a>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="icon-text">
+                <i class="fas fa-users"></i>
+                <h3>Community Education</h3>
+            </div>
+            <ul>
+            <li>Host workshops and help raise awareness about gender-based violence.</li>
+            <a class="btn-primary" href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women">Get Materials</a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- WAYS TO HELP -->
+<div class="section">
+    <h2 style="text-align:center; margin-bottom:20px;">Ways to Help Others</h2>
+    <div class="three-col">
+        <div class="help-card">
+            <div class="help-card-content">
+                <h3>Support GBV Organizations</h3>
+                <p>Donate to or volunteer with organizations that provide support to survivors of GBV, advocate for policy changes, or work to prevent violence.</p>
+                <a href="https://www.google.com/search?q=organizations+against+gender+based+violence&amp;sca_esv=ac0834c4b5f7f19c&amp;ei=Daw7adPfKtDk2roPx-GigQk&amp;oq=&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiACoCCAQyFxAAGIAEGJECGLQCGOcGGIoFGOoC2AEBMhcQABiABBiRAhi0AhjnBhiKBRjqAtgBATIXEAAYgAQYkQIYtAIY5wYYigUY6gLYAQEyFxAAGIAEGJECGLQCGOcGGIoFGOoC2AEBMhcQABiABBiRAhi0AhjnBhiKBRjqAtgBATIgEAAYgAQYtAIY1AMY5QIY5wYYtwMYigUY6gIYigPYAQEyIBAAGIAEGLQCGNQDGOUCGOcGGLcDGIoFGOoCGIoD2AEBMiAQABiABBi0AhjUAxjlAhjnBhi3AxiKBRjqAhiKA9gBATIgEAAYgAQYtAIY1AMY5QIY5wYYtwMYigUY6gIYigPYAQEyIBAAGIAEGLQCGNQDGOUCGOcGGLcDGIoFGOoCGIoD2AEBSJsaUABYAHABeACQAQCYAQCgAQCqAQC4AQHIAQD4AQGYAgGgAgWoAgqYAwXxBfTHgdaAIUS1ugYECAEYB5IHATGgBwCyBwC4BwDCBwMyLTHIBwOACAA&amp;sclient=gws-wiz-serp" class="help-btn">Find GVB Organizations</a>
+            
+            </div>
+        </div>
+
+        <div class="help-card">
+            <div class="help-card-content">
+                <h3>Share Trusted Resources</h3>
+                <p>Access reliable GBV information and share it to raise awareness.</p>
+                <a href="https://help.unhcr.org/turkiye/services-in-turkiye/information-and-resources-on-protection-from-violence/key-messages-on-gender-based-violence/#:~:text=Here%20are%20some%20key%20messages%20about%20gender%2Dbased,boys%20can%20also%20be%20survivors%20of%20violence**" class="help-btn">Access Resources</a>
+            </div>
+        </div>
+
+        <div class="help-card">
+            <div class="help-card-content">
+                <h3>Take Action</h3>
+                <p>Learn actionable ways to support someone experiencing GBV, including listening, believing, validating, and safety planning.</p>
+               <a href="https://safespeaks.org/2020/12/08/7-ways-to-support-a-person-going-through-gender-based-violence/" class="help-btn">Get Support Tips</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Access LAYA</h4>
+      <p>Empowering communities against gender-based violence through education, advocacy, and survivor-centered support.</p>
+    </div>
+    <div class="footer-column">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="3_act.html">Hotlines</a></li>
+        <li><a href="4_yoke.html">Community</a></li>
+        <li><a href="5_advocate.html">Digital Materials</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@accesslaya.ph">accesslaya@email.com</a></li>
+        <li><a href="#">+63 917 555 2211</a></li>
+        <li><a href="#">Batangas City, Philippines</a></li>
+      </ul>
+      <div class="socials">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Access LAYA. All rights reserved.</span>
+    <span>Privacy Policy • Terms</span>
+  </div>
+</footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

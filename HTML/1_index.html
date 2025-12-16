@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access LAYA | Learn, Act, Yoke and Advocate Against Gender-Based Violence</title>
+<style>
+:root {
+  --bg: #edd9ff;
+  --white: #fff7ff;
+  --light: #f2a8ff;
+  --gray: #dac3e8;
+  --mid: #e498ff;
+  --dark: #b66ee8;
+  --darker: #a564d3;
+  --text: #7a5290;
+  --muted: #d581ff;
+  --accent: #ffc9ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-image: url("img/backgroundimage.jpg");
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: var(--mid);
+  color: var(--white);
+}
+.top-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.92rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.tagline {
+  flex: 1;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+.hero {
+    background: linear-gradient(
+    90deg,
+    var(--light) 0%,
+    var(--mid) 45%,
+    var(--dark) 80%,
+    var(--darker) 100%
+  );
+  color: var(--white);
+  text-align: center;
+  padding: 110px 20px;
+}
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color:#fbf2ff;
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--darker);
+}
+.hero h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color:#73408c;
+}
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+.section p {
+  text-align: center;
+  color: var(--white);
+}
+.focus-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+    .focus-card {
+      display: grid;
+      text-align: center;
+      background: var(--bg);
+      border-radius: 1.25rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-left: 30rem;
+      margin-right: 30rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(108, 43, 243, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(33, 26, 47, 0.1);
+    }
+
+    .focus-card span {
+      font-size: 2rem;
+      display: grid;
+      margin-bottom: 1rem;
+    }
+
+    .focus-card h3 {
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    .button-link {
+      margin-top: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Infographic Section */
+    .infographic-section {
+      margin-top: 3rem;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      background: linear-gradient(135deg, #fef3ff 0%, #f9f0ff 50%, #fef9fb 100%);
+      border: 1px solid rgba(108, 43, 243, 0.15);
+    }
+
+    .infographic-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .infographic-header h2 {
+      font-size: clamp(1.75rem, 4vw, 2.3rem);
+      color: var(--dark);
+    }
+
+    .infographic-header p {
+      color: var(--muted);
+    }
+
+    .infographic-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .infographic-card {
+      background: var(--card);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      box-shadow: 0 12px 28px rgba(33, 26, 47, 0.08);
+      border-left: 6px solid var(--primary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+    }
+
+    .infographic-card:nth-child(2) {
+      border-left-color: var(--secondary);
+    }
+
+    .infographic-card:nth-child(3) {
+      border-left-color: var(--accent-dark);
+    }
+
+    .infographic-card:nth-child(4) {
+      border-left-color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .stat-description {
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+
+    .stat-source {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: auto;
+    }
+
+    .stat-icon {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 1.8rem;
+      opacity: 0.2;
+    }
+
+    /* Quick links repurposed header */
+    .infographic-badge {
+      align-self: center;
+      background: rgba(108, 43, 243, 0.12);
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .dual-columns {
+      display: grid;
+      gap: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 30px;
+      margin-right: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .dual-card {
+      background: var(--bg);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 1px solid rgba(108, 43, 243, 0.1);
+      box-shadow: 0 10px 25px rgba(33, 26, 47, 0.08);
+    }
+
+footer {
+  background: var(--darker);
+  color: #ffffff;
+  padding: 40px 20px 60px;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.footer-brand p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #bfbfbf;
+}
+.footer-column h5 {
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: #fffdfd;
+}
+.footer-column ul {
+  list-style: none;
+}
+.footer-column li + li {
+  margin-top: 8px;
+}
+.footer-column a {
+  color: #c9c9c9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer-bottom {
+  max-width: 1100px;
+  margin: 18px auto 0;
+  border-top: 1px solid #fbdbff;
+  padding-top: 18px;
+  font-size: 0.82rem;
+  color: #e5dee4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+.socials span {
+  border: 1px solid #750099;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #750099;
+}
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tagline {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero {
+    padding: 80px 16px;
+  }
+  .cta {
+    margin: 40px 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">A</div>
+      <div>
+        <strong>Access LAYA</strong>
+      </div>
+    </div>
+    <div class="tagline">Empowering communities against gender-based violence</div>
+    <nav>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Access LAYA</h1>
+    <h2>Learn, Act, Yoke, Advocate Against Gender-Based Violence</h2>
+        <h3>Access LAYA provides resources, education, and community support to recognize, prevent, and address gender-based violence in all its forms.</h3>
+
+</section>
+
+  <h2 class="focus-heading">Key Focus Areas</h2>
+
+      <article class="focus-card">
+        <span>💜</span>
+        <h3>About Us</h3>
+        <p>Know more about Access LAYA's story and mission.</p>
+        <a class="button-link" href="6_about.html">Explore →</a>
+      </article>
+      <article class="focus-card">
+        <span>💡</span>
+        <h3>Learn</h3>
+        <p>Learn about gender-based violence, its forms, and its causes.</p>
+        <a class="button-link" href="2_learn.html">Explore →</a>
+      </article>
+      <article class="focus-card">
+        <span>✊🏻</span>
+        <h3>Act</h3>
+        <p>Act with practical steps and effective prevention methods.</p>
+        <a class="button-link" href="3_act.html">Explore →</a>
+      </article>
+      <article class="focus-card">
+        <span>👥</span>
+        <h3>Yoke</h3>
+        <p>Connect with support groups and build community resilience.</p>
+        <a class="button-link" href="4_yoke.html">Explore →</a>
+      </article>
+      <article class="focus-card">
+        <span>📣</span>
+        <h3>Advocate</h3>
+        <p>Advocate, educate, and be part of the fight against GBV.</p>
+        <a class="button-link" href="5_advocate.html">Explore →</a>
+      </article>
+    </section>
+
+    <section class="infographic-section" aria-labelledby="infographic-title">
+      <div class="infographic-header">
+        <div class="infographic-badge">Philippines GBV Snapshot</div>
+        <h2 id="infographic-title">Significant and Impactful Statistics on Gender-Based Violence</h2>
+        <p>Visual insights to underscore the urgent need for comprehensive protection across all communities in the Philippines.</p>
+      </div>
+
+      <div class="infographic-grid">
+        <article class="infographic-card">
+          <div class="stat-icon">♀️</div>
+          <div class="stat-label">Intimate Partner Violence</div>
+          <div class="stat-value">1 in 4</div>
+          <p class="stat-description">Filipina women aged 15–49 have experienced physical, emotional, or economic abuse from a partner at least once (Philippine Statistics Authority, 2022 NDHS).</p>
+          <p class="stat-source">Source: PSA 2022 National Demographic and Health Survey</p>
+        </article>
+
+        <article class="infographic-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-label">Sexual Violence Reports</div>
+          <div class="stat-value">Every 72 min</div>
+          <p class="stat-description">A rape complaint is filed with the Philippine National Police approximately every 72 minutes, highlighting pervasive sexual violence.</p>
+          <p class="stat-source">Source: PNP Women & Children Protection Center, 2023</p>
+        </article>
+
+        <article class="infographic-card">
+          <div class="stat-icon">🏳️‍🌈</div>
+          <div class="stat-label">LGBTQIA+ Harassment</div>
+          <div class="stat-value">60%</div>
+          <p class="stat-description">Six in ten LGBTQIA+ Filipinos report experiencing verbal, physical, or online harassment rooted in their SOGIESC.</p>
+          <p class="stat-source">Source: UNDP & USAID Being LGBT in Asia—Philippines, 2018</p>
+        </article>
+
+        <article class="infographic-card">
+          <div class="stat-icon">🚨</div>
+          <div class="stat-label">Human Trafficking Survivors</div>
+          <div class="stat-value">83%</div>
+          <p class="stat-description">Women and girls account for 83% of identified trafficking survivors, many forced into sexual exploitation or forced labor.</p>
+          <p class="stat-source">Source: Inter-Agency Council Against Trafficking (IACAT) Report, 2022</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dual-columns">
+      <article class="dual-card">
+        <h3>Emergency Resources</h3>
+        <p>Access immediate help and crisis intervention services available 24/7.</p>
+        <ul>
+          <li>National Hotline: <strong>1-800-799-7233</strong></li>
+          <li>Text “HELP” to <strong>88788</strong></li>
+        </ul>
+      </article>
+
+      <article class="dual-card">
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li><strong>Community Workshop</strong> · October 15, 2023 · Virtual</li>
+          <li><strong>Awareness Walk</strong> · November 5, 2023 · Central Park</li>
+          <li><strong>Support Group Meeting</strong> · Weekly · Thursdays at 7PM</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="dual-columns" style="margin-top:2rem;">
+      <article class="dual-card">
+        <h3>Latest Resources</h3>
+        <ul>
+          <li><strong>Understanding Warning Signs</strong> – Navigating early indicators</li>
+          <li><strong>Supporting Survivors</strong> – Best practices for allies</li>
+          <li><strong>Legal Rights Overview</strong> – Know protections and options</li>
+        </ul>
+      </article>
+
+      <article class="dual-card">
+        <h3>Join Our Movement</h3>
+        <p>Together, we can create safer communities and support those affected by gender-based violence. Your involvement makes a difference.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1rem;">
+          <a class="button-link" href="#volunteer">Volunteer →</a>
+          <a class="button-link" href="#donate">Donate →</a>
+          <a class="button-link" href="#subscribe">Subscribe →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Access LAYA</h4>
+      <p>Empowering communities against gender-based violence through education, advocacy, and survivor-centered support.</p>
+    </div>
+    <div class="footer-column">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="1_index.html">Home</a></li>
+        <li><a href="6_about.html">About</a></li>
+        <li><a href="2_learn.html">Learn</a></li>
+        <li><a href="3_act.html">Act</a></li>
+        <li><a href="4_yoke.html">Yoke</a></li>
+        <li><a href="5_advocate.html">Advocate</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="3_act.html">Hotlines</a></li>
+        <li><a href="4_yoke.html">Community</a></li>
+        <li><a href="5_advocate.html">Digital Materials</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@accesslaya.ph">accesslaya@email.com</a></li>
+        <li><a href="#">+63 917 555 2211</a></li>
+        <li><a href="#">Batangas City, Philippines</a></li>
+      </ul>
+      <div class="socials">
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Access LAYA. All rights reserved.</span>
+    <span>Privacy Policy • Terms</span>
+  </div>
+</footer>
+
+</body>
+</html>
